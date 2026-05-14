@@ -1,22 +1,26 @@
 ---
-title: Copilot Usage-Based Billing Learning Topics
-description: Topic-based coverage for learning practical GitHub Copilot habits under usage-based billing
+title: GitHub Copilot Usage-Based Billing Training Guide
+description: Topic-based coverage for teaching practical GitHub Copilot habits under usage-based billing
 author: Microsoft
 ms.date: 2026-05-14
 ms.topic: tutorial
 keywords:
   - github copilot
-  - learning plan
+  - training
   - usage-based billing
+  - ai credits
 estimated_reading_time: 6
 ---
 
-## Learning Topics
+## Training Guide
 
 Use these topics with developers, engineering managers, and platform teams who
 need to adapt Copilot habits before usage-based billing begins on June 1, 2026.
 The topics can be covered in a workshop, brown bag, team meeting, onboarding
 path, or self-paced review.
+
+For the user-facing guidance, see [USER-GUIDE.md](USER-GUIDE.md). For budget
+and policy guidance, see [ADMIN-GUIDE.md](ADMIN-GUIDE.md).
 
 ## GitHub AI Credits and Billing Basics
 

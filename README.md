@@ -9,19 +9,32 @@ keywords:
   - usage-based billing
   - ai credits
   - developer productivity
-estimated_reading_time: 12
+estimated_reading_time: 10
 ---
 
-## Learn to Use GitHub Copilot Smartly Under Usage-Based Billing
+## GitHub Copilot Usage-Based Billing Info and Tips
 
 GitHub Copilot is moving from request-based billing to usage-based billing on
-June 1, 2026. This repo is a compact learning kit for developers, team leads,
-and billing owners who want to keep using Copilot effectively while understanding
-how model choice, context size, agents, and budgets affect cost.
+June 1, 2026. This repo helps developers, Copilot users, admins, and billing
+owners navigate that transition with practical guidance, budget setup notes, and
+tips for using Copilot intentionally.
 
 The goal is not to use Copilot less. The goal is to use Copilot with clearer
 intent: choose the right mode, give the right context, verify output quickly, and
 avoid expensive loops that do not improve the result.
+
+## Start Here
+
+Use the guide that matches your role:
+
+| Guide | Best for | What it covers |
+| --- | --- | --- |
+| [User guide](USER-GUIDE.md) | Developers and Copilot users | Token-smart habits, prompt patterns, context control, mode choice, and verification tips |
+| [Admin guide](ADMIN-GUIDE.md) | Admins, billing owners, platform teams, and engineering leads | Budget setup, rollout decisions, usage monitoring, policy choices, and coaching signals |
+| [Training guide](TRAINING-GUIDE.md) | Team leads, enablement owners, and facilitators | Topic coverage for workshops, onboarding, brown bags, and self-paced learning |
+
+This README is the shared reference for the billing model, included credits, and
+model pricing tables.
 
 Source docs:
 
@@ -136,90 +149,24 @@ fewer. Gemini 3 Flash has no long-context surcharge.
 
 Raptor mini uses GPT-5 mini pricing. Goldeneye uses GPT-5.1-Codex pricing.
 
-## Smart Copilot habits
+## Quick Transition Checklist
 
-Start with the cheapest effective interaction. Ask a focused question, use a
-lightweight model for routine work when available, and move to a more capable
-model when the task needs deeper reasoning, larger context, or stronger code
-review judgment.
+For users:
 
-Use this workflow:
+1. Start with the narrowest useful prompt and context.
+2. Use completions and next edit suggestions freely for local coding flow.
+3. Use chat for focused explanations, debugging, and small changes.
+4. Use agentic workflows when multi-file autonomy is worth the extra context.
+5. Review diffs and run targeted checks before asking Copilot to continue.
 
-1. Define the outcome in one or two sentences.
-2. Attach or reference only the files needed for the task.
-3. Ask Copilot to inspect before editing when the codebase is unfamiliar.
-4. Prefer small implementation steps over one broad instruction.
-5. Review diffs after each meaningful change.
-6. Run targeted tests before asking for a larger verification pass.
-7. Save repeated prompts as reusable instructions or prompt files.
+For admins:
 
-## Cost-aware prompt patterns
-
-Use specific prompts that reduce unnecessary context and retries:
-
-```text
-Inspect the files related to authentication routing and identify the smallest
-change needed to fix the redirect loop. Do not edit files yet.
-```
-
-```text
-Update only the validation function and its direct tests. Keep the public API
-unchanged and explain any behavior that might affect callers.
-```
-
-```text
-Summarize the failing test output, name the most likely root cause, and propose
-one focused fix before changing code.
-```
-
-Avoid vague prompts that trigger broad exploration:
-
-```text
-Look at this repo and improve it.
-```
-
-```text
-Fix everything and make the code better.
-```
-
-## What to track as a team
-
-Track usage and quality together. Low cost is not a win if it creates more human
-review time, but high model spend should map to work that needed it.
-
-Useful metrics include:
-
-* AI credits used by team, repository, cost center, and user
-* Work types that drive the most agent usage
-* Pull requests where Copilot reduced review or implementation time
-* Repeated prompts that should become reusable instructions
-* Tasks that can stay on completions, next edit suggestions, or lightweight chat
-* Tasks that need premium models or coding agents
-
-## Budget controls to configure
-
-Billing owners can control spend with budgets at four levels:
-
-* Enterprise budgets for all organizations, repositories, and cost centers under
-  the enterprise
-* Organization budgets for all repositories in one organization
-* Cost-center budgets for one cost center
-* User budgets for individual users
-
-Budgets are set in USD, while usage appears in AI credits. Since 1 AI credit is
-$0.01 USD, a $10 budget covers 1,000 AI credits.
-
-A practical rollout pattern is to set alerts first, watch normal usage for a few
-weeks, then add hard limits where needed. For user-level budgets, remember that a
-$0 budget means no access.
-
-## Learning path
-
-Use the supporting docs in order:
-
-1. [Learning topics](docs/learning-plan.md) for the concepts and habits to cover.
-2. [Budget playbook](docs/budget-playbook.md) for team-level controls and
-   rollout decisions.
+1. Confirm who owns Copilot billing and budget changes.
+2. Decide whether additional usage is allowed after included credits are used.
+3. Configure enterprise, organization, cost-center, and user budgets where they
+  match your governance model.
+4. Start with alerts, observe real usage, then add hard limits where needed.
+5. Monitor both AI credit usage and engineering value.
 
 ## Repository goals
 

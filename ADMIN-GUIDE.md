@@ -1,6 +1,6 @@
 ---
-title: Copilot Budget Playbook
-description: Practical budget controls and operating habits for GitHub Copilot usage-based billing
+title: GitHub Copilot Admin Guide for Usage-Based Billing
+description: Budget setup, rollout decisions, and monitoring guidance for GitHub Copilot usage-based billing
 author: Microsoft
 ms.date: 2026-05-14
 ms.topic: how-to
@@ -9,14 +9,39 @@ keywords:
   - budgets
   - ai credits
   - billing
-estimated_reading_time: 7
+estimated_reading_time: 9
 ---
 
-## Budget Playbook
+## Admin Guide
 
-Usage-based billing rewards teams that connect Copilot spend to engineering
-outcomes. Use this playbook to prepare billing controls without cutting off
-valuable work too early.
+Use this guide to prepare budget controls and operating habits for GitHub
+Copilot usage-based billing. The goal is to keep high-value Copilot usage
+available while making spend visible and manageable.
+
+For billing basics and model pricing, start with [README.md](README.md).
+
+## Budget Basics
+
+Budgets are set in USD, while usage appears in GitHub AI Credits. Since 1 AI
+Credit is $0.01 USD, a $10 budget covers 1,000 AI credits.
+
+When the pooled included credits are exhausted, behavior depends on your policy:
+
+* Additional usage allowed: usage continues at published per-credit rates.
+* Additional usage not allowed: usage is blocked until the next billing cycle.
+
+If a user-level budget is exhausted, that user's Copilot access is halted even
+when the organization still has pooled credits. There is no automatic fallback to
+lower-cost models when a budget is exhausted.
+
+## Budget Levels
+
+| Budget level | Use it for | Watch out for |
+| --- | --- | --- |
+| Enterprise | Broad guardrails across organizations, repositories, and cost centers | A hard stop can affect many teams at once |
+| Organization | Team or product-area accountability | Shared infrastructure teams may span organizations |
+| Cost center | Finance-aligned spend ownership | Cost centers need clear mapping to engineering work |
+| User | Coaching, experiments, and individual safeguards | A $0 budget disables access, and exhausted user budgets halt Copilot access |
 
 ## Rollout Checklist
 
@@ -47,15 +72,6 @@ After the promotional period ends on September 1, 2026:
    credits.
 3. Update onboarding material with observed examples from your organization.
 
-## Budget Levels
-
-| Budget level | Use it for | Watch out for |
-| --- | --- | --- |
-| Enterprise | Broad guardrails across organizations, repositories, and cost centers | A hard stop can affect many teams at once |
-| Organization | Team or product-area accountability | Shared infrastructure teams may span organizations |
-| Cost center | Finance-aligned spend ownership | Cost centers need clear mapping to engineering work |
-| User | Coaching, experiments, and individual safeguards | A $0 budget disables access, and exhausted user budgets halt Copilot access |
-
 ## Recommended Policy Starting Points
 
 Use these settings as discussion starters, not universal rules:
@@ -66,6 +82,20 @@ Use these settings as discussion starters, not universal rules:
 | Mature team with stable usage | Allow with user and organization budgets | Tune based on normal monthly usage |
 | Sensitive cost center | Limit with stricter alerts | Use clear escalation for exceptions |
 | Short-term migration or incident | Temporarily allow more usage | Review after the event and reset budgets |
+
+## What to Track
+
+Track usage and quality together. Low cost is not a win if it creates more human
+review time, but high model spend should map to work that needed it.
+
+Useful metrics include:
+
+* AI credits used by team, repository, cost center, and user
+* Work types that drive the most agent usage
+* Pull requests where Copilot reduced review or implementation time
+* Repeated prompts that should become reusable instructions
+* Tasks that can stay on completions, next edit suggestions, or lightweight chat
+* Tasks that need premium models or coding agents
 
 ## Coaching Signals
 

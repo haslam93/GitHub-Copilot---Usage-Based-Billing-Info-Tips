@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Copilot change from PRU to UBB</title>
+  <desc id="desc">Infographic showing GitHub Copilot moving from premium request units to usage-based billing with AI credits, tokens, pooled included credits, budgets, and visibility.</desc>
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.46" stop-color="#edfdf9"/>
+      <stop offset="1" stop-color="#f3f0ff"/>
+    </linearGradient>
+    <linearGradient id="leftCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="rightCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e7fbf6"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+    <filter id="softShadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L14,8 L2,14 Z" fill="#0969da"/>
+    </marker>
+    <style>
+      .bg { fill: url(#page); }
+      .eyebrow { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #0969da; letter-spacing: 0; }
+      .title { font: 800 64px 'Segoe UI', Arial, sans-serif; fill: #111827; letter-spacing: 0; }
+      .subtitle { font: 400 29px 'Segoe UI', Arial, sans-serif; fill: #334155; letter-spacing: 0; }
+      .card-title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #111827; letter-spacing: 0; }
+      .card-label { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #64748b; letter-spacing: 0; }
+      .body { font: 500 26px 'Segoe UI', Arial, sans-serif; fill: #334155; letter-spacing: 0; }
+      .body-strong { font: 800 28px 'Segoe UI', Arial, sans-serif; fill: #111827; letter-spacing: 0; }
+      .small { font: 600 22px 'Segoe UI', Arial, sans-serif; fill: #475569; letter-spacing: 0; }
+      .tiny { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #64748b; letter-spacing: 0; }
+      .pill-text { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #0f172a; letter-spacing: 0; }
+      .white { fill: #ffffff; }
+      .muted-stroke { stroke: #cbd5e1; stroke-width: 2; }
+      .blue-stroke { stroke: #0969da; stroke-width: 10; stroke-linecap: round; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <path d="M0,766 C244,700 404,842 648,774 C901,704 1005,570 1248,632 C1391,669 1494,752 1600,716 L1600,900 L0,900 Z" fill="#dff8f2" opacity="0.8"/>
+  <path d="M0,812 C236,758 445,876 710,814 C944,759 1028,650 1269,702 C1418,734 1497,816 1600,785 L1600,900 L0,900 Z" fill="#e8e0ff" opacity="0.65"/>
+
+  <g transform="translate(90 72)">
+    <text class="eyebrow" x="0" y="0">GitHub Copilot billing update</text>
+    <text class="title" x="0" y="72">From PRU to UBB</text>
+    <text class="subtitle" x="0" y="123">June 1, 2026: Copilot usage moves into AI credits, token-based pricing, pooled credits, and budget controls.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="95" y="245" width="575" height="445" rx="30" fill="url(#leftCard)" stroke="#d5dbe5" stroke-width="2"/>
+    <rect x="930" y="245" width="575" height="445" rx="30" fill="url(#rightCard)" stroke="#b7eadf" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(145 302)">
+    <text class="card-label" x="0" y="0">BEFORE</text>
+    <text class="card-title" x="0" y="72">PRU</text>
+    <text class="body-strong" x="0" y="124">Premium request units</text>
+    <g transform="translate(0 171)">
+      <circle cx="13" cy="-8" r="7" fill="#64748b"/>
+      <text class="body" x="36" y="0">Request-oriented metering</text>
+      <circle cx="13" cy="48" r="7" fill="#64748b"/>
+      <text class="body" x="36" y="56">Less direct token visibility</text>
+      <circle cx="13" cy="104" r="7" fill="#64748b"/>
+      <text class="body" x="36" y="112">Harder to compare model cost</text>
+      <circle cx="13" cy="160" r="7" fill="#64748b"/>
+      <text class="body" x="36" y="168">Limited budget conversation</text>
+    </g>
+  </g>
+
+  <g transform="translate(980 302)">
+    <text class="card-label" x="0" y="0">AFTER</text>
+    <text class="card-title" x="0" y="72">UBB</text>
+    <text class="body-strong" x="0" y="124">Usage-based billing</text>
+    <g transform="translate(0 171)">
+      <circle cx="13" cy="-8" r="7" fill="#059669"/>
+      <text class="body" x="36" y="0">AI credits convert usage to dollars</text>
+      <circle cx="13" cy="48" r="7" fill="#059669"/>
+      <text class="body" x="36" y="56">Input, output, and cached tokens count</text>
+      <circle cx="13" cy="104" r="7" fill="#059669"/>
+      <text class="body" x="36" y="112">Credits are pooled by billing entity</text>
+      <circle cx="13" cy="160" r="7" fill="#059669"/>
+      <text class="body" x="36" y="168">Budgets and alerts guide usage</text>
+    </g>
+  </g>
+
+  <g transform="translate(696 422)">
+    <path class="blue-stroke" d="M0,43 C64,6 141,6 206,43" fill="none"/>
+    <rect x="43" y="79" width="120" height="48" rx="24" fill="#ffffff" stroke="#bfdbfe" stroke-width="2" filter="url(#softShadow)"/>
+    <text class="pill-text" x="62" y="111">changes to</text>
+  </g>
+
+  <g transform="translate(155 735)">
+    <rect x="0" y="0" width="309" height="88" rx="18" fill="#ffffff" stroke="#dbe3ee" stroke-width="2" filter="url(#softShadow)"/>
+    <text class="small" x="28" y="36">1 AI Credit = $0.01</text>
+    <text class="tiny" x="28" y="65">Costs map to credits and spend</text>
+  </g>
+  <g transform="translate(500 725)">
+    <rect x="0" y="0" width="309" height="88" rx="18" fill="#ffffff" stroke="#dbe3ee" stroke-width="2" filter="url(#softShadow)"/>
+    <text class="small" x="28" y="30">Included monthly pool</text>
+    <text class="tiny" x="28" y="57">Business: 1,900 credits/user</text>
+    <text class="tiny" x="28" y="79">Enterprise: 3,900 credits/user</text>
+  </g>
+  <g transform="translate(845 725)">
+    <rect x="0" y="0" width="309" height="88" rx="18" fill="#ffffff" stroke="#dbe3ee" stroke-width="2" filter="url(#softShadow)"/>
+    <text class="small" x="28" y="30">Promo until Sept. 1</text>
+    <text class="tiny" x="28" y="57">Business: 3,000 credits/user</text>
+    <text class="tiny" x="28" y="79">Enterprise: 7,000 credits/user</text>
+  </g>
+  <g transform="translate(1190 735)">
+    <rect x="0" y="0" width="309" height="88" rx="18" fill="#ffffff" stroke="#dbe3ee" stroke-width="2" filter="url(#softShadow)"/>
+    <text class="small" x="28" y="36">Completions remain</text>
+    <text class="tiny" x="28" y="65">Unlimited for paid plans</text>
+  </g>
+
+</svg>

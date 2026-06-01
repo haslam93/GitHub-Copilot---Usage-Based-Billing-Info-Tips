@@ -23,13 +23,19 @@ The goal is not to use Copilot less. The goal is to use Copilot with clearer
 intent: choose the right mode, give the right context, verify output quickly, and
 avoid expensive loops that do not improve the result.
 
-## Announcements related to UBB
+## Announcements
 
-* June 1: UBB goes live. User-level budgeting goes live.
+### June 1
+
+UBB goes live. User-level budgeting goes live.
 
 ![User-level budget configuration showing the Users budget scope](image.png)
 
-* June 2: Microsoft Build kicks off. Expect new announcements.
+### June 2
+
+Microsoft Build kicks off. Expect new announcements.
+
+![Microsoft Build logo](build-logo.svg)
 
 ## Start Here
 

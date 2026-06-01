@@ -2,7 +2,7 @@
 title: GitHub Copilot Usage-Based Billing Learning Guide
 description: A practical guide for using GitHub Copilot intentionally as usage-based billing begins on June 1, 2026
 author: Microsoft
-ms.date: 2026-05-14
+ms.date: 2026-05-26
 ms.topic: guide
 keywords:
   - github copilot
@@ -23,6 +23,11 @@ The goal is not to use Copilot less. The goal is to use Copilot with clearer
 intent: choose the right mode, give the right context, verify output quickly, and
 avoid expensive loops that do not improve the result.
 
+## Announcements related to UBB
+
+* June 1: UBB goes live. User-level budgeting goes live.
+* June 2: Microsoft Build kicks off. Expect new announcements.
+
 ## Start Here
 
 Use the guide that matches your role:
@@ -32,6 +37,27 @@ Use the guide that matches your role:
 | [User guide](USER-GUIDE.md) | Developers and Copilot users | Token-smart habits, prompt patterns, context control, mode choice, and verification tips |
 | [Admin guide](ADMIN-GUIDE.md) | Admins, billing owners, platform teams, and engineering leads | Budget setup, rollout decisions, usage monitoring, policy choices, and coaching signals |
 | [Training guide](TRAINING-GUIDE.md) | Team leads, enablement owners, and facilitators | Topic coverage for workshops, onboarding, brown bags, and self-paced learning |
+| [Tools to optimize usage](TOOLS-TO-OPTIMIZE-USAGE.md) | Developers, team leads, and enablement owners | Practical tools for reviewing Copilot usage patterns, compressing context, and reducing low-value token spend |
+
+## Repository map
+
+```mermaid
+flowchart TD
+  Repo["GHCP-UBB documentation set<br/>Guidance for GitHub Copilot usage-based billing"]
+  Readme["README.md<br/>Start page, billing basics, included AI credits, model pricing, and transition checklist"]
+  UserGuide["USER-GUIDE.md<br/>Developer habits for token-smart prompts, context control, mode choice, and verification"]
+  AdminGuide["ADMIN-GUIDE.md<br/>Budget setup, rollout planning, usage monitoring, policy choices, and coaching signals"]
+  TrainingGuide["TRAINING-GUIDE.md<br/>Workshop, onboarding, brown bag, and self-paced learning topics for teams"]
+  ToolsGuide["TOOLS-TO-OPTIMIZE-USAGE.md<br/>Tools for reviewing usage patterns, compressing context, and improving Copilot habits"]
+
+  Repo --> Readme
+  Readme --> UserGuide
+  Readme --> AdminGuide
+  Readme --> TrainingGuide
+  Readme --> ToolsGuide
+  TrainingGuide --> UserGuide
+  TrainingGuide --> AdminGuide
+```
 
 This README is the shared reference for the billing model, included credits, and
 model pricing tables.

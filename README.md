@@ -2,7 +2,7 @@
 title: GitHub Copilot Usage-Based Billing Learning Guide
 description: A practical guide for using GitHub Copilot intentionally as usage-based billing begins on June 1, 2026
 author: Microsoft
-ms.date: 2026-05-26
+ms.date: 2026-06-01
 ms.topic: guide
 keywords:
   - github copilot
@@ -26,6 +26,9 @@ avoid expensive loops that do not improve the result.
 ## Announcements related to UBB
 
 * June 1: UBB goes live. User-level budgeting goes live.
+
+![User-level budget configuration showing the Users budget scope](image.png)
+
 * June 2: Microsoft Build kicks off. Expect new announcements.
 
 ## Start Here

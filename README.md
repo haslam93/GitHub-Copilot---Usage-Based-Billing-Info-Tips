@@ -35,7 +35,7 @@ UBB goes live. User-level budgeting goes live.
 
 Microsoft Build kicks off. Expect new announcements.
 
-![Microsoft Build logo](build-logo.svg)
+![Microsoft Build logo](image-1.png)
 
 ## Start Here
 

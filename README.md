@@ -11,7 +11,7 @@ keywords:
   - developer productivity
 estimated_reading_time: 10
 ---
-
+![GitHub Copilot UBB quick savings checklist](image-2.png)
 ## GitHub Copilot Usage-Based Billing Info and Tips
 
 GitHub Copilot is moving from request-based billing to usage-based billing on
@@ -36,6 +36,22 @@ UBB goes live. User-level budgeting goes live.
 Microsoft Build kicks off. Expect new announcements.
 
 ![Microsoft Build logo](image-1.png)
+
+Developer-relevant UBB announcements to watch:
+
+* New coding models can change both quality and cost. MAI-CODE-Flash is
+  positioned as a lower-cost model than Claude Haiku while staying strong for
+  common developer tasks such as code explanation, targeted edits, test
+  generation, and small debugging loops.
+* A cheaper model is not automatically a cheaper session. MAI-CODE-Flash can
+  help reduce AI credit consumption when it solves the task with shorter input,
+  less repeated context, and fewer follow-up turns.
+* For everyday coding help, start with MAI-CODE-Flash when you need fast,
+  focused assistance. Escalate to larger models only when the work requires
+  deeper reasoning across many files or ambiguous design tradeoffs.
+* Compare model value by outcome, not only token price. Track whether the model
+  gets to a correct diff faster, uses less context, and avoids costly retry
+  loops.
 
 ## Start Here
 

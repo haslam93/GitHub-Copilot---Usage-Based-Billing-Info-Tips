@@ -1,126 +1,211 @@
 ---
 title: GitHub Copilot Usage-Based Billing Training Guide
-description: Topic-based coverage for teaching practical GitHub Copilot habits under usage-based billing
+description: Workshop modules for GitHub AI Credits, budgets, model choice, cache preservation, Chronicle, and cost-efficient agent workflows
 author: Microsoft
-ms.date: 2026-05-14
+ms.date: 2026-07-22
 ms.topic: tutorial
 keywords:
   - github copilot
   - training
   - usage-based billing
   - ai credits
-estimated_reading_time: 6
+  - chronicle
+estimated_reading_time: 8
 ---
 
-## Training Guide
+# Training guide
 
-Use these topics with developers, engineering managers, and platform teams who
-need to adapt Copilot habits before usage-based billing begins on June 1, 2026.
-The topics can be covered in a workshop, brown bag, team meeting, onboarding
-path, or self-paced review.
+Use these modules for developer workshops, manager briefings, platform-team
+enablement, onboarding, or self-paced learning.
 
-For the user-facing guidance, see [USER-GUIDE.md](USER-GUIDE.md). For budget
-and policy guidance, see [ADMIN-GUIDE.md](ADMIN-GUIDE.md).
+For current prices and dates, use [README.md](README.md). For role-specific
+guidance, use [USER-GUIDE.md](USER-GUIDE.md) and
+[ADMIN-GUIDE.md](ADMIN-GUIDE.md).
 
-## GitHub AI Credits and Billing Basics
+## Suggested 60-minute workshop
 
-Cover how GitHub AI Credits work and what does or does not consume them.
+| Time | Module |
+| ---: | --- |
+| 10 min | AI credit and pooling basics |
+| 10 min | Budget and cost-center controls |
+| 10 min | Model choice, MAI, Kimi, and Auto |
+| 10 min | Context and cache preservation |
+| 10 min | Chronicle and session limits |
+| 10 min | Team scenarios and commitments |
 
-Topics to include:
+## Module 1: AI credit basics
 
-1. Review included credits for Copilot Business and Copilot Enterprise.
-2. Compare completion usage with chat, CLI, cloud agent, Spaces, Spark, and
-   third-party coding agents.
-3. Calculate a simple pool size for a 25-person and 100-person team.
-4. Discuss what should happen when included credits are exhausted.
+Learning objectives:
 
-Practice prompt:
+* Explain that 1 AI credit equals $0.01 USD.
+* Identify which Copilot features consume credits.
+* Explain Business and Enterprise monthly pools.
+* Explain the September 1 promotional-credit change.
 
-```text
-Explain GitHub AI Credits to a developer team in five bullet points. Include
-what is billed, what is not billed, and why model choice matters.
-```
+Key facts:
 
-## Choosing the Right Copilot Mode
+| Plan | Standard credits per user | Promotion through September 1, 2026 |
+| --- | ---: | ---: |
+| Copilot Business | 1,900 | 3,000 |
+| Copilot Enterprise | 3,900 | 7,000 |
 
-Cover how common development tasks map to completions, chat, edit mode, agent
-mode, CLI, and code review.
+Exercise:
 
-Topics to include:
+1. Calculate the standard pool for 25 Business users.
+2. Calculate the promotional pool.
+3. Discuss what happens when the pool is exhausted.
 
-1. List common team tasks from the last sprint.
-2. Mark each task as low, medium, or high context.
-3. Choose the lowest-friction Copilot mode for each task.
-4. Identify tasks where agent mode is worth the extra context and token use.
+Answer: 47,500 standard credits and 75,000 promotional credits.
 
-Decision guide:
+## Module 2: Budget controls
 
-| Task | Good starting mode | Why |
-| --- | --- | --- |
-| Fill in local implementation details | Code completions | Unlimited on paid plans and fast for narrow edits |
-| Explain one file or function | Chat | Focused context and quick iteration |
-| Modify several related files | Edit or agent mode | Useful when changes cross file boundaries |
-| Diagnose terminal or command usage | Copilot CLI | Keeps command reasoning close to the shell |
-| Review a pull request | Copilot code review | Helpful for broad review, but also consumes AI credits and GitHub Actions minutes |
+Teach the difference between:
 
-## Prompting for Less Waste
+* user-level budgets, which count pool and paid usage and always hard-stop;
+* cost-center AI credit pools, which protect included usage;
+* cost-center, organization, and enterprise budgets, which govern additional
+  spend after the pool is exhausted; and
+* the paid-usage policy and stop-usage setting.
 
-Cover prompt patterns that reduce broad scans, retries, and unnecessary
-generated output.
-
-Topics to include:
-
-1. Rewrite vague prompts into focused prompts.
-2. Practice asking Copilot to inspect before editing.
-3. Limit scope by naming files, functions, tests, or constraints.
-4. Ask for a short plan only when the task is ambiguous or risky.
-
-Prompt template:
+Scenario:
 
 ```text
-Goal: <specific outcome>
-Scope: <files, folders, or APIs Copilot should consider>
-Constraints: <what must stay unchanged>
-Verification: <tests, commands, or manual checks to run>
-Before editing: summarize the likely change in two sentences.
+An enterprise has a central platform team and three product groups. The platform
+team does more agentic work, while each product group funds its own licenses.
+Design a universal user budget, one cost-center override, included-usage caps,
+and additional-spend budgets.
 ```
 
-## Efficient Verification
+Ask participants to explain which control blocks usage first.
 
-Cover habits that keep quality high without repeatedly asking Copilot to redo
-broad work.
+## Module 3: Model rollout and governance
 
-Topics to include:
+Timeline to teach:
 
-1. Review a Copilot-generated diff and identify assumptions.
-2. Run the smallest relevant tests first.
-3. Ask Copilot to explain only the changed behavior.
-4. Create reusable prompts for common verification tasks.
+* June 2: MAI-Code-1-Flash began rolling out to individual plans.
+* June 18: MAI-Code-1-Flash expanded across Copilot surfaces.
+* June 26: MAI-Code-1-Flash became GA for Business and Enterprise.
+* July 1: Kimi K2.7 Code began rolling out to Pro, Pro+, and Max.
+* July 7: Kimi became available to Business and Enterprise, off by default.
 
-Verification prompt:
+Discussion:
+
+* Why is the cheapest token price not always the cheapest completed task?
+* When should a team use a lightweight execution model?
+* When is a reasoning model worth the cost?
+* What security and governance review should precede an open-weight model pilot?
+
+Teach Auto as the default where available: it routes based on task complexity,
+protects cache boundaries, and gives paid plans a 10% model-cost discount.
+
+## Module 4: Prompting and context
+
+Rewrite a vague prompt:
 
 ```text
-Review only this diff for functional regressions, missing tests, and surprising
-behavior. Prioritize concrete findings with file references.
+Look at this repo and improve it.
 ```
 
-## Team Norms and Budget Monitoring
-
-Cover how the team will decide when higher-cost Copilot workflows are worth it
-and how usage will be monitored.
-
-Topics to include:
-
-1. Decide when lightweight models are the default.
-2. Define when premium models or agent mode are appropriate.
-3. Agree on what usage patterns deserve coaching instead of budget blocking.
-4. Document who monitors usage and who adjusts budgets.
-
-Team agreement starter:
+Into:
 
 ```text
-We use Copilot freely for completions and focused chat. We use larger models and
-agentic workflows when the task crosses files, needs deeper reasoning, or saves
-meaningful engineering time. We watch usage trends weekly during rollout and
-adjust budgets based on observed value, not guesswork.
+Goal: Fix the authentication redirect loop.
+Scope: The route handler and its direct tests.
+Constraints: Keep the public API unchanged.
+Verification: Run the focused authentication tests.
+Stop when: The failure is reproduced, fixed, and the targeted tests pass.
+Before editing: Explain the likely root cause.
 ```
+
+Review why the second prompt reduces exploration, retries, and scope drift.
+
+## Module 5: Protect the cache
+
+Teach that the following can invalidate prompt cache reuse:
+
+* switching models;
+* changing reasoning effort;
+* changing context size;
+* changing enabled tools or MCP servers; and
+* returning after cache expiry.
+
+Hands-on CLI exercise:
+
+```text
+/context
+/compact focus on the implementation plan and remaining tests
+```
+
+Ask participants when they should use `/new` instead of `/compact`.
+
+Expected answer: start a new session for an unrelated problem; compact when the
+same task continues but the history has grown.
+
+## Module 6: Chronicle
+
+Run or demonstrate:
+
+```text
+/chronicle standup last 3 days
+/chronicle tips
+/chronicle cost tips
+/chronicle improve
+```
+
+Discuss how Chronicle can:
+
+* identify repeated high-token patterns;
+* find recurring mistakes for custom instructions;
+* summarize recent work;
+* locate previous sessions; and
+* improve team coaching without treating high usage as inherently bad.
+
+Privacy note: sessions are private to the user by default. Business and
+Enterprise admins must allow local-session cloud syncing for cross-device use.
+Chronicle-generated insight is a normal Copilot CLI model interaction and should
+be treated as consuming AI credits.
+
+## Module 7: Session limits and guardrails
+
+Demonstrate the public-preview CLI limit:
+
+```text
+/limits set max-ai-credits 50
+```
+
+Then discuss:
+
+* why the limit is soft;
+* why it does not replace a monthly user-level budget;
+* how tests and linting stop costly error chains; and
+* why targeted output is better than full logs.
+
+## Team agreement starter
+
+```text
+We use completions freely for local coding. We default to Auto for supported
+Copilot workflows, keep session settings stable to protect the cache, and use
+larger reasoning models when the task genuinely needs them. We split unrelated
+work into new sessions, compact long CLI sessions, and verify changes with
+targeted deterministic checks. We review usage alongside engineering outcomes,
+not as a standalone performance metric.
+```
+
+## Facilitator checklist
+
+* Verify current model prices before the session.
+* Update screenshots if the billing UI changed.
+* Explain the July 1 and July 7 Kimi rollout dates separately.
+* Explain that cost-center pools and cost-center budgets control different
+  phases.
+* Explain that cost-center per-user budgets reached the UI on July 7 and AI
+  credit pools reached it on July 20.
+* Remind admins that the September promotion ends September 1.
+* End with one concrete team norm and one budget owner.
+
+## Official references
+
+* [Optimizing AI usage](https://docs.github.com/en/copilot/tutorials/optimize-ai-usage)
+* [Budgets for usage-based billing](https://docs.github.com/en/copilot/concepts/billing/budgets-for-usage-based-billing)
+* [Models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
+* [Copilot CLI Chronicle](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/chronicle)
